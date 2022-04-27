@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> The current temperature in {{city}} is {{temp}} ℃.</p>
+    <ol> 
+        {% for dic in events %}
+        <li>
+            Near by event's name is {{dic.name}}
+            <p>Event's date is {{dic.date}}</p>
+            <p>Event's image link is {{dic.pic}}</p>
+            <p>Event's ticket purchasing linke is {{dic.link}}</p>
+        </li>
+        {%endfor%}
+    </ol>
+</body>
+</html>

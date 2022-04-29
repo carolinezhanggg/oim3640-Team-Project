@@ -15,12 +15,12 @@
     <p> <strong>The current temperature in {{city}} is {{temp}} ℃.</strong></p>
     <ol> 
         {% for dic in events %}
-        <li>
+        <p><li></p>
             <p><strong>Near by event's name is {{dic.name}}</strong></p>
             <p><strong>Event's date is {{dic.date}}</strong></p>
             <p><img src="{{dic.pic}}" alt="Event Picture" width="200" height="200"> </p>
             <p><a href="{{dic.link}}">Click to purchase ticket</a></p>
-        </li>
+        <p></li></p>
         {%endfor%}
     </ol>
 </body>

@@ -25,15 +25,18 @@ def get_temp(city,country_code):
     """
     Given a city and country code, return the current temperature of the given place. 
     """
+    city = city.replace(" ", "%20")
     url = WEATHER_URL + f'?q={city},{country_code}&APPID={WEATHER_API_KEY}'
     response_data = get_json(url)
     temp = response_data['main']['temp'] - 273.15
     return round(temp,0)
 
+
 def get_events(city,state_code,number):
     """
     Given city and state code, return the recent concert's date, name, picture, and url hold in the given place.
     """
+    city = city.replace(" ", "%20")
     url = CONCERT_URL + f'?apikey={CONCERT_API_KEY}&city={city}&stateCode={state_code}'
     response_data = get_json(url)
     events = []

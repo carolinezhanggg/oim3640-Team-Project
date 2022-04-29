@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    p {text-align: center;}
+    div {text-align: center;}
+</style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p> The current temperature in {{city}} is {{temp}} ℃.</p>
+    <p> <strong>The current temperature in {{city}} is {{temp}} ℃.</strong></p>
     <ol> 
         {% for dic in events %}
-        <li>
-            Near by event's name is {{dic.name}}
-            <p>Event's date is {{dic.date}}</p>
-            <p>Event's image link is {{dic.pic}}</p>
-            <p>Event's ticket purchasing linke is {{dic.link}}</p>
-        </li>
+            <p><strong>Near by event's name is {{dic.name}}</strong></p>
+            <p><strong>Event's date is {{dic.date}}</strong></p>
+            <p><img src="{{dic.pic}}" alt="Event Picture" width="200" height="200"> </p>
+            <p><a href="{{dic.link}}">Click to purchase ticket</a></p>
         {%endfor%}
     </ol>
 </body>
+<style>
+    body {
+background-image: url('https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+</style>
 </html>

@@ -34,7 +34,7 @@ def get_temp(city,country_code):
 
 def get_events(city,state_code,number):
     """
-    Given city and state code, return the recent concert's date, name, picture, and url hold in the given place.
+    Given city and state code, return the recent events' date, name, picture, and url hold in the given place.
     """
     city = city.replace(" ", "%20")
     url = CONCERT_URL + f'?apikey={CONCERT_API_KEY}&city={city}&stateCode={state_code}'

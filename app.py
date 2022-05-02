@@ -1,5 +1,5 @@
 """
-application that can find the nearest MBTA and shows whether it is wheelchair accessible using Flask
+application that can find current weather and recent events using Flask
 """
 
 from flask import Flask, render_template, request

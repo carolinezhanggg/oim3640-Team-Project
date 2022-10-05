@@ -11,38 +11,54 @@
         form{
             width: 600px;
             margin: 20px auto ;
-            padding: 20px;
-            background-color: rgba(10, 10, 10, 0.3);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: rgba(177, 156, 149, 0.3);
         }
 
         div {
             text-align: center;
         }
+
+        h1{
+            text-align: center;
+            text-shadow: 1px 1px 2px bisque;
+        }
+
         label{
             display: inline-block;
             width: 200px;
             text-align: right;
+            text-shadow: 1px 1px 2px bisque;
         }
+
         button{
             display: block;
-            width: 600px; 
+            width: 400px; 
             margin-left: auto;
             margin-right: auto;
+            background-color: bisque;
         }
+
+        .reminder{
+            text-align:center;
+        }
+        
+        </style>
     </style>
 </head>
 
 <body>
     <form action="" method="post">
         <h1>
-            <p>Welcome to Events and Weather Helper!</p>
+            <p>Welcome to Events and Weather Helper</p>
         </h1>
         <p><label for=""><strong>City:</strong></label><input type="text" name="city"></p>
-        <p><label for=""><strong>State Code (no empty space):</strong></label><input type="text" name="statecode"></p>
+        <p><label for=""><strong>State Code:</strong></label><input type="text" name="statecode"></p>
         <p><label for=""><strong>Country Code:</strong></label><input type="text" name="countrycode"></p>
         <p><label for=""><strong>Number of events:</label></strong><input type="number"
                     name="How many number of events would you want to be listed?"></p>
-        
+        <p class="reminder"> Please remove empty space when entering.</p>
         <button><strong>Check Weather and Events</strong>
 
         </button>

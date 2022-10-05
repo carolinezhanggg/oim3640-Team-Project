@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-    p {text-align: center;}
+    p {
+        text-align: center;
+        text-shadow: 1px 1px 2px whitesmoke;
+        font-size: medium;
+    }
+    .weather{
+        text-align: center;
+        text-shadow: 1px 1px 2px whitesmoke;
+        font-size: large;
+    }
     div {text-align: center;}
 </style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Events and Weather Helper</title>
 </head>
 
 <body>
-    <p> <strong>The current temperature in {{city}} is <mark>{{temp}} ℃.</mark></strong></p>
+    <p class="weather"> <strong>The current temperature in {{city}} is <mark>{{temp}} ℃.</mark></strong></p>
     <ol> 
         {% for dic in events %}
             <p><strong>Near by event's name is {{dic.name}}</strong></p>
